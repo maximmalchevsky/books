@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"server/config"
+)
 
 func main() {
-	fmt.Println("hello world")
+	cfg := config.MustLoad()
+	fmt.Printf("%#v\n", cfg)
 }
